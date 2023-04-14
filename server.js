@@ -353,7 +353,7 @@ app.post("/forgotpassword", async (req, res, next) => {
     }
     const resetToken = user.getResetPasswordToken();
     await user.save();
-    const resetUrl = `http://localhost:3000/resetpassword/${resetToken}`;
+    const resetUrl = `https://bejewelled-lily-5505de.netlify.app/resetpassword/${resetToken}`;
     const message = `<h1>Reset Password link</h1><p>click on the link to reset password</p><a href=${resetUrl} clicktracking=off>${resetUrl}</a>`;
 
     console.log(resetUrl);
